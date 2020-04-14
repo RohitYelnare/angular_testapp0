@@ -1,4 +1,13 @@
 <p>This is the start of the test component</p>
-<input #fname type="text" placeholder="First Name">
-<input #lname type="text" placeholder="Last Name">
-<p (mouseenter)="appear(fname.value,lname.value)" (mouseleave)="disappear()">Your name is </p><p>{{text}}</p>
+
+<input #fname [(ngModel)]="firstname" type="text" placeholder="First Name">
+<input #lname [(ngModel)]="lastname" type="text" placeholder="Last Name"><br>
+
+{{"Your full name is " + firstname + " "  + lastname}}
+
+<p (mouseenter)="appear(fname.value,lname.value)" (mouseleave)="disappear()">Your full name is {{text}}</p>
+
+<button #showname (click)="onClick(fname.value,lname.value)">{{button_content}}</button>{{text2}}<br><br>
+
+<input #password type="password" placeholder="Password">
+<p>Your pasword should contain atleast one digit</p>
