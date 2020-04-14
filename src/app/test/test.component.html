@@ -1,7 +1,7 @@
 <p>This is the start of the test component</p>
 
 <input #fname [(ngModel)]="firstname" type="text" placeholder="First Name">
-<input #lname [(ngModel)]="lastname" type="text" placeholder="Last Name"><br>
+<input #lname [(ngModel)]="lastname" type="text" placeholder="Last Name"><br><br>
 
 {{"Your full name is " + firstname + " "  + lastname}}
 
@@ -9,5 +9,6 @@
 
 <button #showname (click)="onClick(fname.value,lname.value)">{{button_content}}</button>{{text2}}<br><br>
 
-<input #password type="password" placeholder="Password">
+<!--<input #password type="password" placeholder="Password">
 <p>Your pasword should contain atleast one digit</p>
+-->

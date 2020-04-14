@@ -19,15 +19,15 @@ export class TestComponent implements OnInit {
     this.text='';
   }
   onClick(a,b,c){
-    this.counter++;
     if(this.counter%2==0){
-      this.text2= a + " " + b;
+      this.text2= " " + a + " " + b;
       this.button_content="Hide name";
     }
     else{
       this.text2="";
       this.button_content="Show name";
     }
+    this.counter++;
   }
    constructor() { }
 
