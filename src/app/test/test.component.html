@@ -1,4 +1,4 @@
 <p>This is the start of the test component</p>
-<input id="fname" type="text" placeholder="First Name">
-<input id="name" type="text" placeholder="Last Name">
-<p (mouseenter)="appear()" (mouseleave)="disappear()">Your name is </p><p>{{text}}</p>
+<input #fname type="text" placeholder="First Name">
+<input #lname type="text" placeholder="Last Name">
+<p (mouseenter)="appear(fname.value,lname.value)" (mouseleave)="disappear()">Your name is </p><p>{{text}}</p>

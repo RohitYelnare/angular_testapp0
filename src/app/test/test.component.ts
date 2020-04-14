@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
   public nameboxid="hi";
   public text="";
-  appear(text){
-    this.text='hi';
+  appear(a,b){
+    this.text="Your full name is " + a + " " +b;
   }
-  disappear(text){
+  disappear(){
     this.text='';
   }
    constructor() { }
