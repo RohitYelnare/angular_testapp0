@@ -2,12 +2,46 @@
 
 <input #fname [(ngModel)]="firstname" type="text" placeholder="First Name">
 <input #lname [(ngModel)]="lastname" type="text" placeholder="Last Name"><br><br>
-
 {{"Your full name is " + firstname + " "  + lastname}}
 
 <p (mouseenter)="appear(fname.value,lname.value)" (mouseleave)="disappear()">Your full name is {{text}}</p>
 
 <button #showname (click)="onClick(fname.value,lname.value)">{{button_content}}</button>{{text2}}<br><br>
+
+<!--  
+<button (click)="msg(1)">Show</button>
+<button (click)="msg(0)">Hide</button>
+<div *ngIf="myboolean; then thenblock; else elseblock"></div>
+<ng-template #thenblock>
+  <p>Hello world</p>
+</ng-template>
+<ng-template #elseblock>
+<p>Message is hidden</p>
+</ng-template>
+<br>
+<br>
+-->
+<button (click)="truefunc()">Show</button>
+<button (click)="falsefunc()">Hide</button>
+<div *ngIf="myboolean; then thenblock; else elseblock"></div>
+<ng-template #thenblock>
+  <p>Hello world</p>
+</ng-template>
+<ng-template #elseblock>
+<p>Message is hidden</p>
+</ng-template>
+<br>
+<br>
+<button (click)="myclick('a')">a</button>
+<button (click)="myclick('b')">b</button>
+<button (click)="myclick('c')">c</button>
+{{myvar}}
+<div [ngSwitch]="myvar">
+  <div *ngSwitchCase="'a'">You picked a</div>
+  <div *ngSwitchCase="'b'">You picked b</div>
+  <div *ngSwitchCase="'c'">You picked c</div>
+  <div *ngSwitchDefault>You picked nothing</div>
+</div>
 
 <!--<input #password type="password" placeholder="Password">
 <p>Your pasword should contain atleast one digit</p>
